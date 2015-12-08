@@ -1,15 +1,14 @@
-//动态规划,注意可以是一维状态变量；
+package com.leetcode.twentyone;
+
 public class Solution {
-    public int longestValidParentheses(String s) {
+	public int longestValidParentheses(String s) {
 		if (s.isEmpty())
 			return 0;
-		//t[j]表示到j的最大有效子串
 		int[] t = new int[s.length()];
 		for (int j = 1; j < s.length(); j++) {
 			int length = maxLength(0, j, s);
 			t[j] = Math.max(length, t[j - 1]);
 		}
-
 		return t[s.length() - 1];
 	}
 
@@ -25,5 +24,10 @@ public class Solution {
 				index = k - 1;
 		}
 		return end - index;
+	}
+
+	public static void main(String[] args) {
+		String s = "";
+		System.out.println(new Solution().longestValidParentheses(s));
 	}
 }
