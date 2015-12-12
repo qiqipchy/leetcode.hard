@@ -5,6 +5,7 @@ public class Solution {
 	// 计算两遍
 
 	int cnt = 0;
+	//这两个反了，visit[i]表示第i列的横坐标，row[i]表示第i个横坐标有没有被占用
 	int[] row;
 	int[] visit;
 	List<Integer> list = new ArrayList<Integer>();
