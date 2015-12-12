@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
-	// 计算两遍
+	// 遇到递归还是拆成各种函数比较好，使用数组比较好，快，不用封装好的集合；
 
 	int cnt = 0;
 	//这两个反了，visit[i]表示第i列的横坐标，row[i]表示第i个横坐标有没有被占用
