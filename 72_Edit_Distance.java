@@ -1,4 +1,13 @@
-public class Solution {
+  public class Solution {
+		/**
+		 * 	如果s1[i]=s2[j];
+		 * 	不用修改:common[i][j]=common[i-1][j-1];
+		 * 	否则有三种修改:
+		 * 	1.s1[i]替换为s2[j]:common[i][j]=common[i-1][j-1]+1;
+		 * 	2.删除s1[i],common[i][j]=common[i-1][j]+1;
+		 * 	3.在s1中添加s2[j],common[i][j]=common[i][j-1]+1;
+		 * 
+		 **/
     public int minDistance(String word1, String word2) {
        
 		int[][] common=new int[word1.length()+1][word2.length()+1];
@@ -22,5 +31,3 @@ public class Solution {
 		}
 		return common[word1.length()][word2.length()];
     }
-
-}
